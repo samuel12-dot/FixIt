@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
@@ -19,7 +19,6 @@ const RATING_OPTIONS = [
 
 export function SearchClient() {
   const params = useSearchParams();
-  const router = useRouter();
 
   const [categories, setCategories] = useState<Category[]>([]);
   const [artisans, setArtisans] = useState<Artisan[]>([]);
