@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: oklch(28% 0.02 260);
+
+  --color-ink: oklch(28% 0.02 260);
+  --color-ink-soft: oklch(48% 0.02 260);
+  --color-ink-faint: oklch(60% 0.015 260);
+  --color-line: oklch(90% 0.008 260);
+  --color-line-soft: oklch(93% 0.008 260);
+
+  --color-accent: oklch(48% 0.13 158);
+  --color-accent-dark: oklch(40% 0.12 158);
+  --color-accent-soft: oklch(95% 0.045 158);
+  --color-green: oklch(58% 0.13 155);
+  --color-green-soft: oklch(95% 0.04 155);
+  --color-amber: oklch(72% 0.14 70);
+  --color-amber-soft: oklch(96% 0.05 75);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-ink-faint: var(--color-ink-faint);
+  --color-line: var(--color-line);
+  --color-line-soft: var(--color-line-soft);
+
+  --color-accent: var(--color-accent);
+  --color-accent-dark: var(--color-accent-dark);
+  --color-accent-soft: var(--color-accent-soft);
+  --color-green: var(--color-green);
+  --color-green-soft: var(--color-green-soft);
+  --color-amber: var(--color-amber);
+  --color-amber-soft: var(--color-amber-soft);
+
+  --font-sans: var(--font-hanken), sans-serif;
+  --font-display: var(--font-bricolage), sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: oklch(85% 0.09 158);
+}
