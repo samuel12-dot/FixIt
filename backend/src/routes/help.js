@@ -12,4 +12,9 @@ router.get('/', async (req, res) => {
   res.json({ articles });
 });
 
+router.get('/popular', async (req, res) => {
+  const articles = await HelpArticle.find({ popular: true }).limit(5);
+  res.json({ articles });
+});
+
 export default router;

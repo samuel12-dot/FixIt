@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Container } from "./Container";
 import { Button } from "@/components/ui/Button";
 import { useAuth } from "@/lib/auth-context";
 import { CATEGORY_LIST } from "@/lib/constants";
+import { apiFetch } from "@/lib/api";
+import type { Category } from "@/lib/types";
 
 const NAV_LINKS = [
   { href: "/how-it-works", label: "How it works" },
@@ -27,6 +29,15 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { user, logout } = useAuth();
   const router = useRouter();
+  const [categoryCounts, setCategoryCounts] = useState<Record<string, number>>({});
+
+  useEffect(() => {
+    apiFetch<{ categories: Category[] }>("/categories")
+      .then(({ categories }) => {
+        setCategoryCounts(Object.fromEntries(categories.map((c) => [c.slug, c.available])));
+      })
+      .catch(() => {});
+  }, []);
 
   function closeAll() {
     setServicesOpen(false);
@@ -65,9 +76,14 @@ export function Header() {
                       key={cat.slug}
                       href={`/search?category=${cat.slug}`}
                       onClick={closeAll}
-                      className="rounded-lg px-3 py-2.5 text-sm font-semibold text-ink hover:bg-neutral-50"
+                      className="flex flex-col gap-0.5 rounded-lg px-3 py-2.5 text-ink hover:bg-neutral-50"
                     >
-                      {cat.label}
+                      <span className="text-sm font-semibold">{cat.label}</span>
+                      {categoryCounts[cat.slug] !== undefined && (
+                        <span className="text-[11px] text-ink-faint">
+                          {categoryCounts[cat.slug]} artisans
+                        </span>
+                      )}
                     </Link>
                   ))}
                   <Link

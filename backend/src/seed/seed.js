@@ -64,16 +64,16 @@ const BLOG_POSTS = [
 ];
 
 const HELP_ARTICLES = [
-  { cat: 'payments', title: 'How does escrow protect my payment?', body: 'When you book, your payment is held securely by FixIt and only released to the artisan once you confirm the job is complete.' },
+  { cat: 'payments', title: 'How does escrow protect my payment?', body: 'When you book, your payment is held securely by FixIt and only released to the artisan once you confirm the job is complete.', popular: true },
   { cat: 'payments', title: 'When is the artisan actually paid?', body: 'The artisan is paid the moment you tap "Confirm complete & release payment" on your order tracking screen.' },
-  { cat: 'payments', title: 'What payment methods can I use?', body: 'You can pay by card, bank transfer, or USSD at checkout. All methods are held in escrow the same way.' },
-  { cat: 'verification', title: 'What does the green verified badge mean?', body: 'It means the artisan’s government ID and trade certification have been checked by our trust & safety team.' },
+  { cat: 'payments', title: 'What payment methods can I use?', body: 'You can pay by card, bank transfer, or USSD at checkout. All methods are held in escrow the same way.', popular: true },
+  { cat: 'verification', title: 'What does the green verified badge mean?', body: 'It means the artisan’s government ID and trade certification have been checked by our trust & safety team.', popular: true },
   { cat: 'verification', title: 'How do you check an artisan’s ID?', body: 'We verify government-issued ID and, where applicable, trade certifications before an artisan can accept jobs.' },
-  { cat: 'bookings', title: 'How do I reschedule or cancel a booking?', body: 'Open your order from the tracking screen and choose reschedule or cancel. Cancelling before the artisan is en route is free.' },
+  { cat: 'bookings', title: 'How do I reschedule or cancel a booking?', body: 'Open your order from the tracking screen and choose reschedule or cancel. Cancelling before the artisan is en route is free.', popular: true },
   { cat: 'bookings', title: 'What happens after I book an artisan?', body: 'The artisan is notified immediately, confirms the job, and you can track their status and chat in real time.' },
   { cat: 'disputes', title: 'A job went wrong — how do I open a dispute?', body: 'Do not release payment. Open a dispute from the order screen and our support team will step in to mediate.' },
   { cat: 'disputes', title: 'How long do refunds take?', body: 'Approved refunds are typically processed back to your original payment method within 3-5 business days.' },
-  { cat: 'getting-started', title: 'How do I find the right artisan for my job?', body: 'Use the search bar on the homepage, describe the job and your area, then compare verified artisans by price and rating.' },
+  { cat: 'getting-started', title: 'How do I find the right artisan for my job?', body: 'Use the search bar on the homepage, describe the job and your area, then compare verified artisans by price and rating.', popular: true },
   { cat: 'getting-started', title: 'Creating your FixIt account', body: 'Sign up with your name, email, phone number and a password — it takes less than a minute.' },
   { cat: 'artisans', title: 'How and when do I get paid as an artisan?', body: 'Funds are released to your account instantly once the customer confirms the job is complete.' },
 ];

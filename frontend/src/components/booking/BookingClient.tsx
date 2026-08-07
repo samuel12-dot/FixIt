@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
+import { BackLink } from "@/components/layout/BackLink";
 import { Button } from "@/components/ui/Button";
 import { categoryLabel } from "@/components/artisans/ArtisanCard";
 import { URGENCY_MULT, URGENCY_OPTIONS } from "@/lib/constants";
@@ -118,7 +119,9 @@ export function BookingClient({ artisan }: { artisan: Artisan }) {
   }
 
   return (
-    <section className="py-5 pb-16">
+    <>
+      <BackLink href={`/artisans/${artisan._id}`} label="Profile" />
+      <section className="py-5 pb-16">
       <Container className="max-w-[1000px]">
         <h1 className="font-display mb-1.5 text-[28px] font-bold tracking-tight">Book {artisan.name}</h1>
         <div className="mb-7 text-sm text-ink-soft">
@@ -304,6 +307,7 @@ export function BookingClient({ artisan }: { artisan: Artisan }) {
           </div>
         </div>
       </Container>
-    </section>
+      </section>
+    </>
   );
 }

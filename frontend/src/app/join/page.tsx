@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Container } from "@/components/layout/Container";
+import { BackLink } from "@/components/layout/BackLink";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { inputClass } from "@/components/ui/Field";
@@ -38,7 +39,9 @@ export default function JoinPage() {
   }
 
   return (
-    <section className="py-9 sm:py-14">
+    <>
+      <BackLink href="/" label="Home" />
+      <section className="py-9 sm:py-14">
       <Container className="max-w-[720px]">
         {done ? (
           <div className="rounded-[20px] border border-line bg-white p-10 text-center shadow-[0_12px_32px_-18px_oklch(40%_0.03_260_/_0.3)] sm:p-12">
@@ -116,6 +119,7 @@ export default function JoinPage() {
           </>
         )}
       </Container>
-    </section>
+      </section>
+    </>
   );
 }

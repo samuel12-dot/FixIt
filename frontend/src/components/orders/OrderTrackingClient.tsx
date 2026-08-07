@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
+import { BackLink } from "@/components/layout/BackLink";
 import { Button } from "@/components/ui/Button";
 import { categoryLabel } from "@/components/artisans/ArtisanCard";
 import { apiFetch, ApiError } from "@/lib/api";
@@ -130,7 +131,9 @@ export function OrderTrackingClient({ bookingId }: { bookingId: string }) {
   const firstName = booking.artisan.name.split(" ")[0];
 
   return (
-    <section className="py-5 pb-16">
+    <>
+      <BackLink href={`/artisans/${booking.artisan._id}`} label="Profile" />
+      <section className="py-5 pb-16">
       <Container className="max-w-[1100px]">
         <h1 className="font-display mb-1 text-[26px] font-bold tracking-tight">Order #{booking.orderCode}</h1>
         <div className="mb-7 text-sm text-ink-soft">
@@ -289,6 +292,7 @@ export function OrderTrackingClient({ bookingId }: { bookingId: string }) {
           </div>
         </div>
       </Container>
-    </section>
+      </section>
+    </>
   );
 }

@@ -20,6 +20,7 @@ export default function HelpPage() {
   const [query, setQuery] = useState("");
   const [cat, setCat] = useState("payments");
   const [articles, setArticles] = useState<HelpArticle[]>([]);
+  const [popularArticles, setPopularArticles] = useState<HelpArticle[]>([]);
 
   useEffect(() => {
     const params = new URLSearchParams();
@@ -29,6 +30,12 @@ export default function HelpPage() {
       setArticles(res.articles)
     );
   }, [query, cat]);
+
+  useEffect(() => {
+    apiFetch<{ articles: HelpArticle[] }>("/help/popular").then((res) =>
+      setPopularArticles(res.articles)
+    );
+  }, []);
 
   const heading = query ? `Results for "${query}"` : HELP_CATS.find((c) => c.id === cat)?.label || "Help";
 
@@ -94,6 +101,19 @@ export default function HelpPage() {
                     <span className="shrink-0 text-accent-dark">→</span>
                   </div>
                 ))}
+              </div>
+            )}
+
+            {popularArticles.length > 0 && (
+              <div className="mt-5">
+                <div className="mb-3 text-[13px] font-bold text-ink-soft">Popular articles</div>
+                <div className="flex flex-col gap-2">
+                  {popularArticles.map((a) => (
+                    <div key={a._id} className="cursor-pointer text-sm font-semibold text-accent-dark">
+                      {a.title}
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
 

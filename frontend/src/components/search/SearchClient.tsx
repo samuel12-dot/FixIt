@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
+import { BackLink } from "@/components/layout/BackLink";
 import { Button } from "@/components/ui/Button";
 import { categoryLabel } from "@/components/artisans/ArtisanCard";
 import { apiFetch } from "@/lib/api";
@@ -99,7 +100,9 @@ export function SearchClient() {
   const title = area ? `Artisans in ${area}` : q ? `Results for "${q}"` : "Find an artisan";
 
   return (
-    <section className="py-6 pb-16">
+    <>
+      <BackLink href="/" label="Home" />
+      <section className="py-6 pb-16">
       <Container>
         <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
           <div>
@@ -239,6 +242,7 @@ export function SearchClient() {
           </div>
         </div>
       </Container>
-    </section>
+      </section>
+    </>
   );
 }

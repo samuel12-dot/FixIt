@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Container } from "@/components/layout/Container";
+import { BackLink } from "@/components/layout/BackLink";
 import { Button } from "@/components/ui/Button";
 import { categoryLabel } from "./ArtisanCard";
 import type { Artisan, Review } from "@/lib/types";
@@ -36,7 +37,9 @@ export function ArtisanProfileClient({ artisan, reviews }: { artisan: Artisan; r
   ];
 
   return (
-    <section className="py-5 pb-16">
+    <>
+      <BackLink href="/search" label="Results" />
+      <section className="py-5 pb-16">
       <Container>
         <div className="mb-6 flex flex-wrap gap-6 rounded-[20px] border border-line-soft bg-white p-7">
           <div className="flex h-[120px] w-[120px] shrink-0 items-center justify-center rounded-2xl border border-[oklch(93%_0.01_55)] bg-[oklch(97%_0.008_55)]">
@@ -190,6 +193,7 @@ export function ArtisanProfileClient({ artisan, reviews }: { artisan: Artisan; r
           </div>
         </div>
       </Container>
-    </section>
+      </section>
+    </>
   );
 }

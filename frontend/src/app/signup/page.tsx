@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Container } from "@/components/layout/Container";
+import { BackLink } from "@/components/layout/BackLink";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Field, inputClass } from "@/components/ui/Field";
@@ -42,7 +43,9 @@ export default function SignUpPage() {
   }
 
   return (
-    <section className="py-10 sm:py-14">
+    <>
+      <BackLink href="/" label="Home" />
+      <section className="py-10 sm:py-14">
       <Container className="max-w-[960px] grid items-center gap-10 lg:grid-cols-2">
         <div>
           <Badge tone="accent" className="mb-4.5">
@@ -145,6 +148,7 @@ export default function SignUpPage() {
           )}
         </div>
       </Container>
-    </section>
+      </section>
+    </>
   );
 }

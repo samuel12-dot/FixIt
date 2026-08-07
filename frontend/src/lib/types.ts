@@ -100,4 +100,5 @@ export type HelpArticle = {
   cat: string;
   title: string;
   body: string;
+  popular?: boolean;
 };

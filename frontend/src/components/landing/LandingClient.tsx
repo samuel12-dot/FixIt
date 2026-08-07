@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -168,9 +169,14 @@ export function LandingClient({
           </div>
 
           <div className="relative flex min-h-[380px] items-center justify-center overflow-hidden rounded-[22px] border border-[oklch(92%_0.01_55)] bg-[oklch(97%_0.008_55)]">
-            <span className="rounded-lg border border-[oklch(92%_0.01_55)] bg-white px-3 py-1.5 font-mono text-xs text-ink-soft">
-              artisan-at-work.jpg
-            </span>
+            <Image
+              src="/images/artisan-at-work.png"
+              alt="Artisan at work"
+              fill
+              priority
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
             <div className="absolute bottom-5 left-5 flex items-center gap-2.5 rounded-2xl bg-white p-3.5 shadow-lg">
               <div className="flex h-9 w-9 items-center justify-center rounded-full bg-green-soft font-bold text-emerald-700">
                 ✓
