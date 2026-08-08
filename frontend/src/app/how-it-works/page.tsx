@@ -68,7 +68,8 @@ export default function HowItWorksPage() {
                     alt={st.title}
                     fill
                     sizes="(min-width: 640px) 33vw, 100vw"
-                    className="object-cover object-[center_25%]"
+                    className="object-cover"
+                    style={{ objectPosition: st.imagePosition ?? "center 25%" }}
                   />
                 ) : (
                   <span className="flex h-full items-center justify-center font-mono text-[11px] text-ink-soft">

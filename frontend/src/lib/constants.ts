@@ -40,13 +40,13 @@ export const FAQS = [
   },
 ];
 
-type HowItWorksStep = { num: string; title: string; text: string; image?: string };
+type HowItWorksStep = { num: string; title: string; text: string; image?: string; imagePosition?: string };
 
 export const HIW_CUSTOMER: HowItWorksStep[] = [
   { num: "1", title: "Search for what you need", text: "Enter the problem and your area. Browse verified artisans matched to your job, with prices and ratings shown upfront.", image: "/images/search-screen.png" },
   { num: "2", title: "Compare and book", text: "Check portfolios, reviews and response times. Book the artisan you trust and choose a time that works.", image: "/images/profile-screen.png" },
   { num: "3", title: "Pay into escrow", text: "Your payment is held safely by FixIt. The artisan sees it is secured and arrives to do the work.", image: "/images/booking-screen.png" },
-  { num: "4", title: "Confirm and release", text: "Track progress and chat in-app. When the job is done to your satisfaction, release the payment with one tap.", image: "/images/tracking-screen.png" },
+  { num: "4", title: "Confirm and release", text: "Track progress and chat in-app. When the job is done to your satisfaction, release the payment with one tap.", image: "/images/tracking-screen.png", imagePosition: "center 12%" },
 ];
 
 export const HIW_ARTISAN: HowItWorksStep[] = [
