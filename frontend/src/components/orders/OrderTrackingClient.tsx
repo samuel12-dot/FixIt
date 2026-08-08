@@ -276,7 +276,7 @@ export function OrderTrackingClient({ bookingId }: { bookingId: string }) {
                 ₦{booking.artisan.priceMin}–{booking.artisan.priceMax}
               </div>
               {booking.paymentReleased ? (
-                <div className="flex items-center gap-2 rounded-[10px] bg-green-soft px-3 py-3 text-[13px] font-semibold text-emerald-700">
+                <div className="flex items-center gap-2 rounded-[10px] bg-green-soft px-3 py-3 text-[13px] font-semibold text-sky-700">
                   ✓ Payment released to {firstName}
                 </div>
               ) : canRelease ? (
