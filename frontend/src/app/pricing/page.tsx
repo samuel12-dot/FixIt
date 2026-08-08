@@ -47,7 +47,7 @@ export default function PricingPage() {
           {STEPS.map((s, i) => (
             <div
               key={s.title}
-              className={`rounded-2xl border bg-white p-6 ${i === 3 ? "border-[oklch(90%_0.02_158)]" : "border-line-soft"}`}
+              className={`rounded-2xl border bg-white p-6 ${i === 3 ? "border-[oklch(90%_0.02_242)]" : "border-line-soft"}`}
             >
               <div
                 className={`font-display mb-3.5 flex h-11 w-11 items-center justify-center rounded-xl font-extrabold ${
@@ -74,7 +74,7 @@ export default function PricingPage() {
                   className={`flex justify-between py-3.5 text-sm ${i < FEES.length - 1 ? "border-b border-line-soft" : ""}`}
                 >
                   <span className="text-[oklch(46%_0.02_260)]">{f.label}</span>
-                  <span className={`font-bold ${f.highlight ? "text-emerald-700" : ""}`}>{f.value}</span>
+                  <span className={`font-bold ${f.highlight ? "text-sky-700" : ""}`}>{f.value}</span>
                 </div>
               ))}
             </div>
