@@ -90,7 +90,7 @@ export default function HowItWorksPage() {
 
       <section className="py-14">
         <Container className="max-w-[1000px]">
-          <div className="rounded-[24px] bg-emerald-950 p-8 text-white sm:p-11">
+          <div className="rounded-[24px] bg-sky-950 p-8 text-white sm:p-11">
             <Badge tone="dark" className="mb-4.5">
               Escrow protection
             </Badge>
@@ -100,14 +100,14 @@ export default function HowItWorksPage() {
             <div className="grid gap-6 sm:grid-cols-2">
               <div>
                 <div className="font-display mb-1.5 font-bold text-white">For the customer</div>
-                <div className="text-sm leading-relaxed text-emerald-200/90">
+                <div className="text-sm leading-relaxed text-sky-200/90">
                   Your money leaves your account but doesn&apos;t reach the artisan until you confirm the job
                   is done. If it goes wrong, it&apos;s refundable.
                 </div>
               </div>
               <div>
                 <div className="font-display mb-1.5 font-bold text-white">For the artisan</div>
-                <div className="text-sm leading-relaxed text-emerald-200/90">
+                <div className="text-sm leading-relaxed text-sky-200/90">
                   You can see the funds are secured before you start work — so you never chase payment or get
                   stiffed after a completed job.
                 </div>
