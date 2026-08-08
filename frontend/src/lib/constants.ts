@@ -28,7 +28,7 @@ export const FAQS = [
   },
   {
     q: "How are artisans verified?",
-    a: "Every artisan submits a government-issued ID and proof of skill or training, which our team reviews before they can accept jobs. Verified artisans carry a green badge on their profile.",
+    a: "Every artisan submits a government-issued ID and proof of skill or training, which our team reviews before they can accept jobs. Verified artisans carry a blue badge on their profile.",
   },
   {
     q: "Can I cancel a booking?",
