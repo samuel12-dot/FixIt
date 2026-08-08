@@ -175,7 +175,7 @@ export function LandingClient({
               fill
               priority
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
+              className="object-cover object-[50%_12%]"
             />
             <div className="absolute bottom-5 left-5 flex items-center gap-2.5 rounded-2xl bg-white p-3.5 shadow-lg">
               <div className="flex h-9 w-9 items-center justify-center rounded-full bg-green-soft font-bold text-sky-700">
