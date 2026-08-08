@@ -45,7 +45,7 @@ export default function JoinPage() {
       <Container className="max-w-[720px]">
         {done ? (
           <div className="rounded-[20px] border border-line bg-white p-10 text-center shadow-[0_12px_32px_-18px_oklch(40%_0.03_260_/_0.3)] sm:p-12">
-            <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-green-soft text-2xl font-bold text-emerald-700">
+            <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-green-soft text-2xl font-bold text-sky-700">
               ✓
             </div>
             <h1 className="font-display mb-2.5 text-2xl font-bold tracking-tight">You&apos;re on the list</h1>
