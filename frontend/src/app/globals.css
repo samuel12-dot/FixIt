@@ -10,11 +10,11 @@
   --color-line: oklch(90% 0.008 260);
   --color-line-soft: oklch(93% 0.008 260);
 
-  --color-accent: oklch(48% 0.13 158);
-  --color-accent-dark: oklch(40% 0.12 158);
-  --color-accent-soft: oklch(95% 0.045 158);
-  --color-green: oklch(58% 0.13 155);
-  --color-green-soft: oklch(95% 0.04 155);
+  --color-accent: oklch(48% 0.13 242);
+  --color-accent-dark: oklch(40% 0.12 242);
+  --color-accent-soft: oklch(95% 0.045 242);
+  --color-green: oklch(58% 0.13 242);
+  --color-green-soft: oklch(95% 0.04 242);
   --color-amber: oklch(72% 0.14 70);
   --color-amber-soft: oklch(96% 0.05 75);
 }
@@ -49,5 +49,5 @@ body {
 }
 
 ::selection {
-  background: oklch(85% 0.09 158);
+  background: oklch(85% 0.09 242);
 }
