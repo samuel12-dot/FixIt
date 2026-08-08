@@ -50,10 +50,10 @@ export const HIW_CUSTOMER: HowItWorksStep[] = [
 ];
 
 export const HIW_ARTISAN: HowItWorksStep[] = [
-  { num: "1", title: "Apply and get verified", text: "Submit your ID and trade certification. Once approved, your verified profile goes live to thousands of customers." },
-  { num: "2", title: "Receive job requests", text: "Get matched with nearby customers who need your skills. Review the details and accept the jobs you want." },
-  { num: "3", title: "Do great work", text: "The payment is already secured in escrow before you start — so you can focus entirely on the job." },
-  { num: "4", title: "Get paid instantly", text: "Once the customer confirms, funds are released straight to you. Build ratings that win you even more work." },
+  { num: "1", title: "Apply and get verified", text: "Submit your ID and trade certification. Once approved, your verified profile goes live to thousands of customers.", image: "/images/apply-screen.png" },
+  { num: "2", title: "Receive job requests", text: "Get matched with nearby customers who need your skills. Review the details and accept the jobs you want.", image: "/images/requests-screen.png" },
+  { num: "3", title: "Do great work", text: "The payment is already secured in escrow before you start — so you can focus entirely on the job.", image: "/images/job-screen.png" },
+  { num: "4", title: "Get paid instantly", text: "Once the customer confirms, funds are released straight to you. Build ratings that win you even more work.", image: "/images/payout-screen.png" },
 ];
 
 export const TEAM = [
