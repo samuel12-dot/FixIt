@@ -202,7 +202,7 @@ export function SearchClient() {
                   <div className="mb-1 flex flex-wrap items-center gap-2">
                     <span className="font-bold text-[17px]">{a.name}</span>
                     {a.verifiedId && (
-                      <span className="inline-flex items-center gap-1 rounded-full bg-green-soft px-2.5 py-0.5 text-[11px] font-bold text-emerald-700">
+                      <span className="inline-flex items-center gap-1 rounded-full bg-green-soft px-2.5 py-0.5 text-[11px] font-bold text-sky-700">
                         ✓ Verified
                       </span>
                     )}
