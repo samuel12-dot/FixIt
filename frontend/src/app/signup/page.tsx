@@ -75,7 +75,7 @@ export default function SignUpPage() {
         <div className="rounded-[20px] border border-line bg-white p-7 shadow-[0_16px_40px_-24px_oklch(40%_0.03_260_/_0.35)]">
           {done ? (
             <div className="py-6 text-center">
-              <div className="mx-auto mb-4.5 flex h-14 w-14 items-center justify-center rounded-full bg-green-soft text-2xl font-bold text-emerald-700">
+              <div className="mx-auto mb-4.5 flex h-14 w-14 items-center justify-center rounded-full bg-green-soft text-2xl font-bold text-sky-700">
                 ✓
               </div>
               <h2 className="font-display mb-2 text-xl font-bold">Welcome to FixIt!</h2>
