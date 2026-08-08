@@ -101,7 +101,7 @@ export function BookingClient({ artisan }: { artisan: Artisan }) {
       <section className="py-10 pb-16">
         <Container className="max-w-[1000px]">
           <div className="rounded-[20px] border border-line-soft bg-white p-12 text-center shadow-[0_12px_32px_-20px_oklch(40%_0.03_260_/_0.3)]">
-            <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-green-soft text-2xl font-bold text-emerald-700">
+            <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-green-soft text-2xl font-bold text-sky-700">
               ✓
             </div>
             <h1 className="font-display mb-2.5 text-2xl font-bold tracking-tight">Booking confirmed</h1>
@@ -272,7 +272,7 @@ export function BookingClient({ artisan }: { artisan: Artisan }) {
               {step < 4 && (
                 <button
                   onClick={() => setStep((s) => Math.min(4, s + 1))}
-                  className="rounded-[10px] bg-emerald-950 px-5.5 py-2.5 text-sm font-semibold text-white"
+                  className="rounded-[10px] bg-sky-950 px-5.5 py-2.5 text-sm font-semibold text-white"
                 >
                   Continue
                 </button>
