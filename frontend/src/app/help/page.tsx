@@ -41,7 +41,7 @@ export default function HelpPage() {
 
   return (
     <div>
-      <section className="border-b border-line-soft bg-[oklch(97%_0.012_158)] py-14">
+      <section className="border-b border-line-soft bg-[oklch(97%_0.012_242)] py-14">
         <Container className="max-w-[760px] text-center">
           <h1 className="font-display mb-4.5 text-[28px] sm:text-[38px] font-extrabold tracking-[-1.5px]">
             How can we help?
@@ -117,10 +117,10 @@ export default function HelpPage() {
               </div>
             )}
 
-            <div className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl bg-emerald-950 p-7 text-white">
+            <div className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl bg-sky-950 p-7 text-white">
               <div>
                 <div className="font-display mb-1 text-lg font-bold">Still need help?</div>
-                <div className="text-sm text-emerald-200/90">Our support team is one message away.</div>
+                <div className="text-sm text-sky-200/90">Our support team is one message away.</div>
               </div>
               <Link href="/contact">
                 <Button variant="dark">Contact support</Button>
