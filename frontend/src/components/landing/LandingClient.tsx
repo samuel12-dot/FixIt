@@ -178,7 +178,7 @@ export function LandingClient({
               className="object-cover"
             />
             <div className="absolute bottom-5 left-5 flex items-center gap-2.5 rounded-2xl bg-white p-3.5 shadow-lg">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-green-soft font-bold text-emerald-700">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-green-soft font-bold text-sky-700">
                 ✓
               </div>
               <div>
@@ -330,7 +330,7 @@ export function LandingClient({
             {HIW_CUSTOMER.map((step, i) => (
               <div key={step.num} className="relative">
                 <div
-                  className={`mb-4 flex h-[54px] w-[54px] items-center justify-center rounded-full border-4 border-white font-display text-xl font-extrabold text-white shadow-[0_0_0_1px_oklch(90%_0.02_158)] ${
+                  className={`mb-4 flex h-[54px] w-[54px] items-center justify-center rounded-full border-4 border-white font-display text-xl font-extrabold text-white shadow-[0_0_0_1px_oklch(90%_0.02_242)] ${
                     i === 3 ? "bg-green" : "bg-accent"
                   }`}
                 >
@@ -442,14 +442,14 @@ export function LandingClient({
       <section className="py-10">
         <Container>
           <div className="grid overflow-hidden rounded-[24px] border border-line-soft lg:grid-cols-2">
-            <div className="bg-emerald-950 p-9 sm:p-11 text-white">
+            <div className="bg-sky-950 p-9 sm:p-11 text-white">
               <Badge tone="dark" className="mb-4.5">
                 For artisans
               </Badge>
               <h2 className="font-display mb-3.5 text-[30px] font-extrabold leading-tight tracking-tight">
                 Turn your skill into steady income.
               </h2>
-              <p className="mb-6.5 text-[16px] leading-relaxed text-emerald-200/90">
+              <p className="mb-6.5 text-[16px] leading-relaxed text-sky-200/90">
                 Join 2,400+ verified artisans getting matched with paying customers across Lagos — and get paid
                 on time, every time, through escrow.
               </p>
@@ -471,7 +471,7 @@ export function LandingClient({
                 <Button variant="dark">Start earning with FixIt →</Button>
               </Link>
             </div>
-            <div className="flex flex-col justify-center gap-5 bg-[oklch(97%_0.008_158)] p-9 sm:p-11">
+            <div className="flex flex-col justify-center gap-5 bg-[oklch(97%_0.008_242)] p-9 sm:p-11">
               <div className="rounded-2xl border border-line-soft bg-white p-6">
                 <div className="mb-1 text-[13px] text-ink-soft">Average monthly earnings</div>
                 <div className="font-display text-[32px] font-extrabold tracking-tight text-accent-dark">
