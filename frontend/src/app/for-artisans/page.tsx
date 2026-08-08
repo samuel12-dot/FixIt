@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/Button";
 
 const WHY = [
   { icon: "₦", title: "Always get paid", text: "Escrow secures the money before you start — no more chasing customers.", bg: "bg-accent-soft", color: "text-accent-dark" },
-  { icon: "✓", title: "Win more work", text: "A verified badge and good ratings put you in front of more customers.", bg: "bg-green-soft", color: "text-emerald-700" },
+  { icon: "✓", title: "Win more work", text: "A verified badge and good ratings put you in front of more customers.", bg: "bg-green-soft", color: "text-sky-700" },
   { icon: "◷", title: "Work on your terms", text: "Set your own rates, hours and service area. Accept the jobs you want.", bg: "bg-amber-soft", color: "text-amber-700" },
   { icon: "↑", title: "Grow your name", text: "Build a public profile and reputation that follows you across Lagos.", bg: "bg-[oklch(95%_0.04_230)]", color: "text-[oklch(52%_0.14_240)]" },
 ];
@@ -43,7 +43,7 @@ export default function ForArtisansPage() {
 
   return (
     <div>
-      <section className="bg-emerald-950 text-white">
+      <section className="bg-sky-950 text-white">
         <Container className="grid items-center gap-12 py-16 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <Badge tone="dark" className="mb-4.5">
@@ -52,7 +52,7 @@ export default function ForArtisansPage() {
             <h1 className="font-display mb-4 text-[34px] sm:text-[48px] font-extrabold leading-[1.03] tracking-[-1.5px]">
               Your skills. More jobs. Guaranteed pay.
             </h1>
-            <p className="mb-7 max-w-[480px] text-[18px] leading-relaxed text-emerald-200/90">
+            <p className="mb-7 max-w-[480px] text-[18px] leading-relaxed text-sky-200/90">
               Join 2,400+ verified artisans across Lagos getting matched with customers who are ready to pay
               — safely, through escrow.
             </p>
@@ -61,14 +61,14 @@ export default function ForArtisansPage() {
                 <Button variant="dark">Apply to join</Button>
               </Link>
               <Link href="/how-it-works">
-                <Button variant="ghost" className="border border-emerald-700 text-white hover:text-white">
+                <Button variant="ghost" className="border border-sky-700 text-white hover:text-white">
                   See how it works
                 </Button>
               </Link>
             </div>
           </div>
-          <div className="flex min-h-[300px] items-center justify-center rounded-[20px] border border-emerald-800 bg-emerald-900">
-            <span className="font-mono text-xs text-emerald-300">artisan-portrait.jpg</span>
+          <div className="flex min-h-[300px] items-center justify-center rounded-[20px] border border-sky-800 bg-sky-900">
+            <span className="font-mono text-xs text-sky-300">artisan-portrait.jpg</span>
           </div>
         </Container>
       </section>
@@ -160,7 +160,7 @@ export default function ForArtisansPage() {
                     >
                       {s.num}
                     </div>
-                    {i < APPLY_STEPS.length - 1 && <div className="min-h-5 w-0.5 flex-1 bg-[oklch(90%_0.02_158)]" />}
+                    {i < APPLY_STEPS.length - 1 && <div className="min-h-5 w-0.5 flex-1 bg-[oklch(90%_0.02_242)]" />}
                   </div>
                   <div className="pb-5.5">
                     <div className="font-display mb-0.5 text-[15px] font-bold">{s.title}</div>
