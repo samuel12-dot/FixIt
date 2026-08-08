@@ -75,7 +75,7 @@ export function ServicesClient({ categories }: { categories: Category[] }) {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-ink-soft">Available now</span>
-                    <span className="font-bold text-emerald-700">{sv.available} artisans</span>
+                    <span className="font-bold text-sky-700">{sv.available} artisans</span>
                   </div>
                 </div>
               </div>
@@ -133,7 +133,7 @@ export function ServicesClient({ categories }: { categories: Category[] }) {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-ink-soft">Available now</span>
-                    <span className="font-bold text-emerald-700">{detail.available} artisans</span>
+                    <span className="font-bold text-sky-700">{detail.available} artisans</span>
                   </div>
                 </div>
                 <Button className="w-full" onClick={() => router.push(`/search?category=${detail.slug}`)}>
