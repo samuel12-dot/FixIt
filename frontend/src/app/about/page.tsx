@@ -19,7 +19,7 @@ const STATS = [
 export default function AboutPage() {
   return (
     <div>
-      <section className="border-b border-line-soft bg-[oklch(97%_0.012_158)]">
+      <section className="border-b border-line-soft bg-[oklch(97%_0.012_242)]">
         <Container className="max-w-[900px] py-16 text-center">
           <Badge tone="accent" className="mb-4.5">
             Our story
@@ -108,7 +108,7 @@ export default function AboutPage() {
               <div key={m.year} className="flex gap-5">
                 <div className="flex flex-col items-center">
                   <div className="mt-1 h-3.5 w-3.5 shrink-0 rounded-full bg-accent" />
-                  {i < MILESTONES.length - 1 && <div className="w-0.5 flex-1 min-h-[24px] bg-[oklch(90%_0.02_158)]" />}
+                  {i < MILESTONES.length - 1 && <div className="w-0.5 flex-1 min-h-[24px] bg-[oklch(90%_0.02_242)]" />}
                 </div>
                 <div className="pb-7">
                   <div className="font-display mb-0.5 text-[15px] font-extrabold text-accent-dark">{m.year}</div>
