@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { Badge } from "@/components/ui/Badge";
 import { HIW_ARTISAN, HIW_CUSTOMER } from "@/lib/constants";
@@ -60,8 +61,20 @@ export default function HowItWorksPage() {
                 <div className="font-display mb-2 text-xl font-bold">{st.title}</div>
                 <div className="text-[15px] leading-relaxed text-ink-soft">{st.text}</div>
               </div>
-              <div className="flex min-h-[150px] items-center justify-center rounded-2xl border border-[oklch(93%_0.01_55)] bg-[oklch(97%_0.008_55)]">
-                <span className="font-mono text-[11px] text-ink-soft">screenshot.png</span>
+              <div className="relative h-55 overflow-hidden rounded-2xl border border-[oklch(93%_0.01_55)] bg-[oklch(97%_0.008_55)]">
+                {st.image ? (
+                  <Image
+                    src={st.image}
+                    alt={st.title}
+                    fill
+                    sizes="(min-width: 640px) 33vw, 100vw"
+                    className="object-cover object-[center_25%]"
+                  />
+                ) : (
+                  <span className="flex h-full items-center justify-center font-mono text-[11px] text-ink-soft">
+                    screenshot.png
+                  </span>
+                )}
               </div>
             </div>
           ))}
