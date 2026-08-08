@@ -53,10 +53,10 @@ export function ArtisanProfileClient({ artisan, reviews }: { artisan: Artisan; r
             <div className="mb-4 flex flex-wrap gap-2">
               {artisan.verifiedId && (
                 <>
-                  <span className="inline-flex items-center gap-1 rounded-full bg-green-soft px-2.5 py-1 text-xs font-bold text-emerald-700">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-green-soft px-2.5 py-1 text-xs font-bold text-sky-700">
                     ✓ ID verified
                   </span>
-                  <span className="inline-flex items-center gap-1 rounded-full bg-green-soft px-2.5 py-1 text-xs font-bold text-emerald-700">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-green-soft px-2.5 py-1 text-xs font-bold text-sky-700">
                     ✓ Skill certified
                   </span>
                 </>
