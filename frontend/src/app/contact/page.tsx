@@ -10,7 +10,7 @@ const SUBJECTS = ["General enquiry", "Booking issue", "Payment & escrow", "Becom
 
 const CONTACT_CARDS = [
   { icon: "✆", title: "Call us", text: "+234 800 349 6483", bg: "bg-accent-soft", color: "text-accent-dark" },
-  { icon: "◐", title: "WhatsApp", text: "Chat with support, 8am–8pm", bg: "bg-green-soft", color: "text-emerald-700" },
+  { icon: "◐", title: "WhatsApp", text: "Chat with support, 8am–8pm", bg: "bg-green-soft", color: "text-sky-700" },
   { icon: "✉", title: "Email", text: "hello@fixit.ng", bg: "bg-[oklch(95%_0.04_230)]", color: "text-[oklch(52%_0.14_240)]" },
 ];
 
@@ -52,7 +52,7 @@ export default function ContactPage() {
           <div className="rounded-[18px] border border-line-soft bg-white p-7 shadow-[0_12px_32px_-24px_oklch(40%_0.03_260_/_0.35)]">
             {sent ? (
               <div className="py-10 text-center">
-                <div className="mx-auto mb-4.5 flex h-14 w-14 items-center justify-center rounded-full bg-green-soft text-2xl font-bold text-emerald-700">
+                <div className="mx-auto mb-4.5 flex h-14 w-14 items-center justify-center rounded-full bg-green-soft text-2xl font-bold text-sky-700">
                   ✓
                 </div>
                 <h2 className="font-display mb-2 text-xl font-bold">Message sent</h2>
