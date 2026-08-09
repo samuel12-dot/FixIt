@@ -248,21 +248,21 @@ export function Header() {
 
       {mobileOpen && (
         <div className="flex md:hidden flex-col gap-1 border-t border-line-soft px-6 pb-5 pt-2 text-[15px] font-medium max-h-[70vh] overflow-y-auto">
-          <Link href="/search" onClick={closeAll} className="py-2.5 text-ink">
+          <MobileNavLink href="/search" active={findActive} onClick={closeAll}>
             Find an artisan
-          </Link>
-          <Link href="/services" onClick={closeAll} className="py-2.5 text-ink">
+          </MobileNavLink>
+          <MobileNavLink href="/services" active={servicesActive} onClick={closeAll}>
             Services
-          </Link>
+          </MobileNavLink>
           {NAV_LINKS.map((link) => (
-            <Link key={link.href} href={link.href} onClick={closeAll} className="py-2.5 text-ink">
+            <MobileNavLink key={link.href} href={link.href} active={isActivePath(pathname, link.href)} onClick={closeAll}>
               {link.label}
-            </Link>
+            </MobileNavLink>
           ))}
           {COMPANY_LINKS.map((link) => (
-            <Link key={link.href} href={link.href} onClick={closeAll} className="py-2.5 text-ink">
+            <MobileNavLink key={link.href} href={link.href} active={isActivePath(pathname, link.href)} onClick={closeAll}>
               {link.label}
-            </Link>
+            </MobileNavLink>
           ))}
           <div className="mt-3 flex gap-2.5">
             {user ? (
