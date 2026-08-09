@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Container } from "./Container";
 import { Button } from "@/components/ui/Button";
 import { useAuth } from "@/lib/auth-context";
@@ -23,13 +23,83 @@ const COMPANY_LINKS = [
   { href: "/contact", label: "Contact us" },
 ];
 
+function isActivePath(pathname: string, href: string) {
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
+function NavLink({
+  href,
+  active,
+  onClick,
+  className = "",
+  children,
+}: {
+  href: string;
+  active: boolean;
+  onClick?: () => void;
+  className?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <Link
+      href={href}
+      onClick={onClick}
+      aria-current={active ? "page" : undefined}
+      className={`group relative flex items-center gap-1 py-2 transition-colors ${
+        active ? "text-ink font-semibold" : "text-ink-soft hover:text-ink"
+      } ${className}`}
+    >
+      {children}
+      <span
+        className={`pointer-events-none absolute inset-x-0 -bottom-0.75 h-0.5 origin-left rounded-full bg-accent transition-transform duration-200 ${
+          active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+        }`}
+      />
+    </Link>
+  );
+}
+
+function MobileNavLink({
+  href,
+  active,
+  onClick,
+  children,
+}: {
+  href: string;
+  active: boolean;
+  onClick?: () => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <Link
+      href={href}
+      onClick={onClick}
+      aria-current={active ? "page" : undefined}
+      className={`border-l-2 py-2.5 pl-3 transition-colors ${
+        active
+          ? "border-accent font-semibold text-accent-dark"
+          : "border-transparent text-ink hover:border-line hover:text-ink"
+      }`}
+    >
+      {children}
+    </Link>
+  );
+}
+
 export function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [companyOpen, setCompanyOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { user, logout } = useAuth();
   const router = useRouter();
+  const pathname = usePathname();
   const [categoryCounts, setCategoryCounts] = useState<Record<string, number>>({});
+
+  const findActive = isActivePath(pathname, "/search");
+  const servicesActive = isActivePath(pathname, "/services");
+  const companyActive = [...COMPANY_LINKS.map((l) => l.href), "/about"].some((href) =>
+    isActivePath(pathname, href)
+  );
 
   useEffect(() => {
     apiFetch<{ categories: Category[] }>("/categories")
@@ -55,19 +125,19 @@ export function Header() {
           <span className="font-display text-[20px] font-extrabold tracking-tight">FixIt</span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6 text-[15px] font-medium text-ink-soft">
-          <Link href="/search" className="hover:text-ink">
+        <nav className="hidden md:flex items-center gap-6 text-[15px] font-medium">
+          <NavLink href="/search" active={findActive}>
             Find an artisan
-          </Link>
+          </NavLink>
 
           <div
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
-            <Link href="/services" className="flex items-center gap-1 hover:text-ink">
+            <NavLink href="/services" active={servicesActive}>
               Services <span className="text-[10px] text-ink-faint">▾</span>
-            </Link>
+            </NavLink>
             {servicesOpen && (
               <div className="absolute left-[-16px] top-full pt-3.5">
                 <div className="grid w-[280px] grid-cols-2 gap-0.5 rounded-2xl border border-line-soft bg-white p-2 shadow-xl">
@@ -99,9 +169,9 @@ export function Header() {
           </div>
 
           {NAV_LINKS.map((link) => (
-            <Link key={link.href} href={link.href} className="hover:text-ink">
+            <NavLink key={link.href} href={link.href} active={isActivePath(pathname, link.href)}>
               {link.label}
-            </Link>
+            </NavLink>
           ))}
 
           <div
@@ -109,22 +179,28 @@ export function Header() {
             onMouseEnter={() => setCompanyOpen(true)}
             onMouseLeave={() => setCompanyOpen(false)}
           >
-            <Link href="/about" className="flex items-center gap-1 hover:text-ink">
+            <NavLink href="/about" active={companyActive}>
               Company <span className="text-[10px] text-ink-faint">▾</span>
-            </Link>
+            </NavLink>
             {companyOpen && (
               <div className="absolute left-[-16px] top-full pt-3.5">
                 <div className="flex w-[190px] flex-col gap-0.5 rounded-2xl border border-line-soft bg-white p-2 shadow-xl">
-                  {COMPANY_LINKS.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={closeAll}
-                      className="rounded-lg px-3 py-2.5 text-sm font-semibold text-ink hover:bg-neutral-50"
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
+                  {COMPANY_LINKS.map((link) => {
+                    const active = isActivePath(pathname, link.href);
+                    return (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={closeAll}
+                        aria-current={active ? "page" : undefined}
+                        className={`rounded-lg px-3 py-2.5 text-sm font-semibold transition-colors ${
+                          active ? "bg-accent-soft text-accent-dark" : "text-ink hover:bg-neutral-50"
+                        }`}
+                      >
+                        {link.label}
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             )}
