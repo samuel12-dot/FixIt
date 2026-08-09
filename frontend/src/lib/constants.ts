@@ -57,10 +57,10 @@ export const HIW_ARTISAN: HowItWorksStep[] = [
 ];
 
 export const TEAM = [
-  { name: "Chidera Obi", role: "Co-founder & CEO" },
-  { name: "Yusuf Bello", role: "Co-founder & CTO" },
-  { name: "Amara Nnaji", role: "Head of Trust & Safety" },
-  { name: "Tobi Adewale", role: "Head of Artisan Growth" },
+  { name: "Chidera Obi", role: "Co-founder & CEO", image: "/images/founder-1.png" },
+  { name: "Yusuf Bello", role: "Co-founder & CTO", image: "/images/founder-2.png" },
+  { name: "Amara Nnaji", role: "Head of Trust & Safety", image: "/images/founder-3.png" },
+  { name: "Tobi Adewale", role: "Head of Artisan Growth", image: "/images/founder-4.png" },
 ];
 
 export const MILESTONES = [

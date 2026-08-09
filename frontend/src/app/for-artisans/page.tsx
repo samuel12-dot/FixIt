@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Container } from "@/components/layout/Container";
@@ -67,8 +68,14 @@ export default function ForArtisansPage() {
               </Link>
             </div>
           </div>
-          <div className="flex min-h-[300px] items-center justify-center rounded-[20px] border border-sky-800 bg-sky-900">
-            <span className="font-mono text-xs text-sky-300">artisan-portrait.jpg</span>
+          <div className="relative min-h-[300px] overflow-hidden rounded-[20px] border border-sky-800 bg-sky-900">
+            <Image
+              src="/images/artisan-portrait.png"
+              alt="Artisan portrait"
+              fill
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              className="object-cover"
+            />
           </div>
         </Container>
       </section>

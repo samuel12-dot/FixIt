@@ -96,8 +96,21 @@ export default function AboutPage() {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {TEAM.map((t) => (
               <div key={t.name} className="text-center">
-                <div className="mb-3.5 flex aspect-square items-center justify-center rounded-[18px] border border-[oklch(93%_0.01_55)] bg-[oklch(97%_0.008_55)]">
-                  <span className="font-mono text-xs text-ink-soft">photo</span>
+                <div className="relative mb-3.5 aspect-square overflow-hidden rounded-[18px] border border-[oklch(93%_0.01_55)] bg-[oklch(97%_0.008_55)]">
+                  {t.image ? (
+                    <Image
+                      src={t.image}
+                      alt={t.name}
+                      fill
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover"
+                      style={{ objectPosition: "center 15%" }}
+                    />
+                  ) : (
+                    <span className="flex h-full items-center justify-center font-mono text-xs text-ink-soft">
+                      photo
+                    </span>
+                  )}
                 </div>
                 <div className="font-display font-bold">{t.name}</div>
                 <div className="text-[13px] text-ink-soft">{t.role}</div>
