@@ -37,14 +37,13 @@ export default function AboutPage() {
 
       <section className="py-16">
         <Container className="grid items-center gap-12 lg:grid-cols-2">
-          <div className="relative min-h-70 overflow-hidden rounded-[20px] border border-[oklch(93%_0.01_55)] bg-[oklch(97%_0.008_55)]">
+          <div className="relative aspect-[3/2] overflow-hidden rounded-[20px] border border-[oklch(93%_0.01_55)] bg-[oklch(97%_0.008_55)]">
             <Image
               src="/images/founder-story.png"
               alt="A FixIt artisan with his tool bag beside the FixIt van in Lagos"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover scale-[1.7]"
-              style={{ objectPosition: "50% 55%", transformOrigin: "78% 55%" }}
+              className="object-cover"
             />
           </div>
           <div>
