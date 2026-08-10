@@ -1,8 +1,22 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import type { BlogPost } from "@/lib/types";
+
+const ARTICLE_HERO_IMAGES = [
+  "/images/article-hero-1.png",
+  "/images/article-hero-2.png",
+  "/images/article-hero-3.png",
+  "/images/article-hero-4.png",
+  "/images/article-hero-5.png",
+];
+
+function heroImageFor(id: string) {
+  const hash = Array.from(id).reduce((sum, ch) => sum + ch.charCodeAt(0), 0);
+  return ARTICLE_HERO_IMAGES[hash % ARTICLE_HERO_IMAGES.length];
+}
 
 async function getPost(id: string) {
   const base = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000/api";
@@ -46,8 +60,15 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ id
             </div>
           </div>
         </div>
-        <div className="mb-7 flex min-h-[280px] items-center justify-center rounded-2xl border border-[oklch(93%_0.01_55)] bg-[oklch(97%_0.008_55)]">
-          <span className="font-mono text-[11px] text-ink-soft">article-hero.jpg</span>
+        <div className="relative mb-7 aspect-3/2 overflow-hidden rounded-2xl border border-[oklch(93%_0.01_55)] bg-[oklch(97%_0.008_55)]">
+          <Image
+            src={heroImageFor(post._id)}
+            alt={post.title}
+            fill
+            sizes="(min-width: 768px) 720px, 100vw"
+            className="object-cover"
+            priority
+          />
         </div>
         <div className="flex flex-col gap-5 text-[17px] leading-[1.75] text-[oklch(34%_0.02_260)]">
           {paragraphs.map((p, i) => (
